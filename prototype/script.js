@@ -20,7 +20,7 @@ var Persona = function(nombre, fechaNacimiento, trabajo) {
 }
 
 Persona.prototype.calcularEdad = function() {
-    console.log(2018 - fechaNacimiento);
+    console.log(2018 - this.fechaNacimiento);
 };
 
 var juan = new Persona('Juan S', 1990, 'Diseñador');
