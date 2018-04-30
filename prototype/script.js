@@ -13,6 +13,16 @@ var Persona = function(nombre, fechaNacimiento, trabajo) {
 */
 
 //Modelo mas eficiente
+var Persona = function(nombre, fechaNacimiento, trabajo) {
+  this.nombre = nombre;
+  this.fechaNacimiento = fechaNacimiento;
+  this.trabajo = trabajo;
+}
+
+Persona.prototype.calcularEdad = function() {
+    console.log(2018 - fechaNacimiento);
+};
+
 var juan = new Persona('Juan S', 1990, 'Diseñador');
 var tavo = new Persona('Gustavo', 1978, 'Escritor');
 var alicia = new Persona('Alicia', 1982, 'Musico');
