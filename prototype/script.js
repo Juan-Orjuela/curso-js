@@ -1,11 +1,7 @@
 //Function constructor
 
-var juan = {
-  nombre: 'Juan',
-  fechaNacimiento: 1990,
-  trabajo: 'Profesor'
-};
-
+/*
+En este caso se crea una copia de la funcion en cada instancia
 var Persona = function(nombre, fechaNacimiento, trabajo) {
   this.nombre = nombre;
   this.fechaNacimiento = fechaNacimiento;
@@ -14,7 +10,13 @@ var Persona = function(nombre, fechaNacimiento, trabajo) {
     console.log(2018 - fechaNacimiento);
   };
 }
+*/
 
+//Modelo mas eficiente
+var juan = new Persona('Juan S', 1990, 'Diseñador');
+var tavo = new Persona('Gustavo', 1978, 'Escritor');
 var alicia = new Persona('Alicia', 1982, 'Musico');
 
+juan.calcularEdad();
+tavo.calcularEdad();
 alicia.calcularEdad();
