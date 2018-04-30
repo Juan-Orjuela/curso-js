@@ -152,3 +152,18 @@ i {
 
 .winner { background-color: #f7f7f7; }
 .winner .player-name { font-weight: 300; color: #EB4D4D; }
+/*Challenge 2*/
+.max-score {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 2px solid #c3c3c352;
+    bottom: 50px;
+    font-size: 1.2rem;
+    text-align: center;
+    transition: border 600ms;
+}
+.max-score:focus {
+    outline: none;
+    border: 2px solid #ec4c4d;
+}

@@ -45,17 +45,8 @@ document.querySelector(".btn-hold").addEventListener('click', function () {
         scores[activePlayer] += roundScore;
         //Update UI
         document.getElementById('score-' + activePlayer).textContent = scores[activePlayer];
-        //Consulte el valor máximo
-        var input = document.querySelector('.max-score').value,
-        puntajeGanador;
-
-        if(input) {
-            puntajeGanador = input
-        } else {
-            puntajeGanador = 100
-        }
         //Check if player won the game
-        if (scores[activePlayer] >= puntajeGanador) {
+        if (scores[activePlayer] >= 100) {
             document.getElementById('name-' + activePlayer).textContent = 'Ganador';
             console.log('El jugador ' + (activePlayer + 1) + ' ganó el juego');
             document.querySelector('.player-' + activePlayer + '-panel').classList.add('winner');
@@ -97,7 +88,6 @@ function init() {
     document.querySelector('.player-0-panel').classList.remove('active');
     document.querySelector('.player-1-panel').classList.remove('active');
     document.querySelector('.player-0-panel').classList.add('active');
-    document.querySelector('.max-score').value = '';
     gamePlaying = true;
 }
 document.querySelector(".btn-new").addEventListener('click', init);
