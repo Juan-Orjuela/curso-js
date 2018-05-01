@@ -30,3 +30,16 @@ var alicia = new Persona('Alicia', 1982, 'Musico');
 juan.calcularEdad();
 tavo.calcularEdad();
 alicia.calcularEdad();
+
+//Otro método para crear objetos y herencia object.create
+var personProto = {
+  calcularEdad : function() {
+     console.log(2018 - this.fechaNacimiento);
+  };
+};
+
+var regina = Object.create(personProto, {
+  nombre : {value: 'Regina'},
+  fechaNacimiento : {value: 1949},
+  trabajo : {value : 'Docente'}
+});
