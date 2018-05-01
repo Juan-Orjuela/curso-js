@@ -35,7 +35,7 @@ alicia.calcularEdad();
 var personProto = {
   calcularEdad : function() {
      console.log(2018 - this.fechaNacimiento);
-  };
+  }
 };
 
 var regina = Object.create(personProto, {
